@@ -28,11 +28,11 @@ Aplicación web desarrollada con **Node.js** y **Express** que permite consultar
 ### Search
 ![Search](images/busqueda.png)
 
-### History
-![History](images/historial.png)
-
 ### Result
 ![Result](images/resultado.png)
+
+### History
+![History](images/historial.png)
 
 ## 📂 Estructura del proyecto
 
