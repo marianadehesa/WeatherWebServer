@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Historial - Aplicación del Clima</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1>🌤 Aplicación del Clima</h1>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="/historial">Historial</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <h2 class="historial-title">Historial de búsquedas</h2>
+
+    {{#if historial.length}}
+      <section class="historial-grid">
+        {{#each historial}}
+          <div class="historial-card">
+            <p>{{this}}</p>
+          </div>
+        {{/each}}
+      </section>
+    {{else}}
+      <p class="historial-vacio">No hay búsquedas registradas.</p>
+    {{/if}}
+
+  </main>
+
+  <footer class="footer">
+    <p>Laboratorio – Aplicación de Clima</p>
+  </footer>
+
+</body>
+</html>

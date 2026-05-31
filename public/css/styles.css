@@ -1,0 +1,293 @@
+/* =========================
+  ESTILO BASE
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #9da3a8, #82b8bb);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* =========================
+  HEADER
+========================= */
+.header {
+  display: flex;
+  flex-direction: column; /* MOBILE FIRST */
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: rgba(63, 72, 87, 0.15);
+  color: #fff;
+  text-align: center;
+}
+
+.header h1 {
+  letter-spacing: 1px;
+}
+
+.header nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 0.6px;
+}
+
+.header nav a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+  CONTENEDOR
+========================= */
+.container {
+  width: 100%;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* =========================
+  BUSCADOR
+========================= */
+.search-section {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.search-section h2 {
+  margin-bottom: 18px;
+  letter-spacing: 0.8px;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column; /* MOBILE FIRST */
+  gap: 14px;
+}
+
+.search-form input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+}
+
+.search-form button {
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: #495e75;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background: #68798c;
+}
+
+/* =========================
+  TARJETAS CLIMA
+========================= */
+.weather-container {
+  margin-top: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 22px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.card h4 {
+  margin-bottom: 10px;
+  letter-spacing: 0.6px;
+}
+
+.main-card {
+  margin-bottom: 30px;
+  padding: 24px;
+}
+
+.main-card h2 {
+  font-size: 24px; /* MOBILE FIRST */
+  margin-bottom: 10px;
+  letter-spacing: 0.8px;
+}
+
+.descripcion {
+  color: #555;
+  margin-bottom: 14px;
+  font-size: 16px;
+  word-spacing: 1.5px;
+}
+
+.temp {
+  font-size: 36px; /* MOBILE FIRST */
+  font-weight: bold;
+  color: #6484a8;
+  margin-top: 4px;
+}
+
+/* =========================
+  GRID DE DATOS
+========================= */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr; /* MOBILE FIRST */
+  gap: 18px;
+  margin-top: 20px;
+}
+
+/* =========================
+  HISTORIAL
+========================= */
+.historial-title {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 26px;
+  letter-spacing: 0.8px;
+}
+
+.historial-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* MOBILE FIRST */
+  gap: 18px;
+}
+
+.historial-card {
+  background: #ffffff;
+  padding: 18px 22px;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.historial-card p {
+  margin: 0;
+  letter-spacing: 0.4px;
+}
+
+.historial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.28);
+}
+
+.historial-vacio {
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+}
+
+/* =========================
+  ERROR
+========================= */
+.error {
+  margin-top: 20px;
+  color: yellow;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.6px;
+}
+
+/* =========================
+  FOOTER
+========================= */
+.footer {
+  margin-top: 50px;
+  padding: 18px;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.6px;
+}
+
+/* =========================
+  RESPONSIVE: TABLET (>= 600px)
+========================= */
+@media (min-width: 600px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 30px;
+  }
+
+  .search-form {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .search-form input {
+    max-width: 320px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .historial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main-card h2 {
+    font-size: 26px;
+  }
+
+  .temp {
+    font-size: 40px;
+  }
+}
+
+/* =========================
+  RESPONSIVE: ESCRITORIO (>= 900px)
+========================= */
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .historial-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .main-card h2 {
+    font-size: 28px;
+  }
+
+  .temp {
+    font-size: 44px;
+  }
+}
+
+/* =========================
+  RESPONSIVE: MÓVIL PEQUEÑO
+========================= */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,213 @@
+/* =========================
+ESTILO PARA LA SELECCIÓN DE CIUDADES 
+========================= */
+
+/* =========================
+BASE
+========================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #9da3a8, #82b8bb);
+    min-height: 100vh;
+    line-height: 1.6;
+    color: #fff;
+}
+
+/* =========================
+    HEADER
+========================= */
+.header {
+    display: flex;
+    flex-direction: column; /* mobile first */
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: rgba(63, 72, 87, 0.15);
+    text-align: center;
+}
+
+.header h1 {
+    letter-spacing: 1px;
+}
+
+.header nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+    CONTENEDOR
+========================= */
+.container {
+    width: 100%;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+/* =========================
+    SELECCIÓN DE CIUDADES
+========================= */
+.selection-section h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    letter-spacing: 0.8px;
+}
+
+.selection-section p {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* GRID DE TARJETAS */
+.selection-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* MOBILE FIRST */
+    gap: 25px; 
+    margin-top: 30px; 
+    align-items: stretch; /* hace que todas las tarjetas tengan misma altura */
+}
+
+.selection-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* empuja el botón hacia abajo */
+    background: #fff;
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.selection-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.22);
+}
+
+.selection-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 0.8px;
+    color: #333;
+}
+
+.selection-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 16px;
+    letter-spacing: 0.4px;
+}
+
+/* =========================
+    BOTÓN SELECCIONAR
+========================= */
+.selection-card button {
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    background: #495e75;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.selection-card button:hover {
+    background: #68798c;
+}
+
+/* =========================
+    LINK VOLVER AL INICIO
+========================= */
+.back-link {
+    display: inline-block;
+    margin-top: 50px; /* más abajo para separar de las tarjetas */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+    FOOTER
+========================= */
+.footer {
+    margin-top: 50px;
+    padding: 18px;
+    text-align: center;
+    color: #fff;
+    background: rgba(0,0,0,0.2);
+    letter-spacing: 0.6px;
+}
+
+/* =========================
+    RESPONSIVE
+========================= */
+
+/* Tablet >=600px */
+@media (min-width: 600px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 30px;
+    }
+
+    .selection-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Escritorio >=900px */
+@media (min-width: 900px) {
+    .selection-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Móvil pequeño <=480px */
+@media (max-width: 480px) {
+    .selection-section h2 {
+        font-size: 20px;
+    }
+
+    .selection-card h3 {
+        font-size: 18px;
+    }
+
+    .selection-card p {
+        font-size: 15px;
+    }
+
+    .selection-card button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .back-link {
+        margin-top: 30px; /* ajustado para móviles */
+    }
+}

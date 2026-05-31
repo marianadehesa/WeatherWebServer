@@ -1,0 +1,26 @@
+{
+  "name": "04-climaapp",
+  "version": "0.1.0",
+  "description": "Aplicacion node de clima",
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "rest"
+  ],
+  "license": "ISC",
+  "author": "Mariana Dehesa Cabrera",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "colors": "^1.4.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "hbs": "^4.2.0",
+    "inquirer": "^12.11.1"
+  }
+}

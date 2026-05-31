@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplicación del Clima</title>
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>🌤 WeatherNow</h1>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="/historial">Historial</a>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO -->
+  <main class="container">
+
+    <!-- BUSCADOR -->
+    <section class="search-section">
+      <h2>Consulta el clima en tiempo real</h2>
+      <form action="/clima" method="GET" class="search-form">
+        <input type="text" name="ciudad" placeholder="Ej. Madrid, Londres, Tokio" required>
+        <button type="submit">Consultar</button>
+      </form>
+    </section>
+
+    <!-- RESULTADO DEL CLIMA -->
+    {{#if ciudad}}
+    <section class="weather-container">
+
+      <!-- Tarjeta principal -->
+      <div class="card main-card">
+        <h2>{{ciudad}}</h2>
+          <h4>Descripción</h4>
+        <p class="descripcion">{{descripcion}}</p>
+          <h4>Temperatura</h4>
+        <p class="temp">{{temperatura}} °C</p>
+      </div>
+
+      <!-- Tarjetas secundarias -->
+      <div class="grid">
+
+        <div class="card">
+          <h4>Temperatura mínima</h4>
+          <p>{{temp_min}} °C</p>
+        </div>
+
+        <div class="card">
+          <h4>Temperatura máxima</h4>
+          <p>{{temp_max}} °C</p>
+        </div>
+
+        <div class="card">
+          <h4>Sensación térmica</h4>
+          <p>{{humedad}}%</p>
+        </div>
+
+        <div class="card">
+          <h4>Latitud</h4>
+          <p>{{latitud}}</p>
+        </div>
+
+        <div class="card">
+          <h4>Longitud</h4>
+          <p>{{longitud}}</p>
+        </div>
+
+      </div>
+    </section>
+    {{/if}}
+
+    <!-- ERROR -->
+    {{#if error}}
+      <p class="error">{{error}}</p>
+    {{/if}}
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Elaborado por <strong>Mariana Dehesa Cabrera</strong> – Aplicación Web del Clima 🌤</p>
+  </footer>
+
+</body>
+</html>
