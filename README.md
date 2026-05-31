@@ -20,6 +20,20 @@ Aplicación web desarrollada con **Node.js** y **Express** que permite consultar
 * API de clima
 * Git & GitHub
 
+## 📸 Screenshots
+
+### Home
+![Home](images/inicio.png)
+
+### Search
+![Search](images/busqueda.png)
+
+### History
+![History](images/historial.png)
+
+### Result
+![Result](images/resultado.png)
+
 ## 📂 Estructura del proyecto
 
 ```text
@@ -70,5 +84,5 @@ Este proyecto me permitió reforzar conocimientos sobre:
 
 **Mariana Dehesa**
 
-Estudiante de Ingeniería en Software interesada en desarrollo web, backend y tecnologías de software.
+Estudiante de Ingeniería de Software.
 
