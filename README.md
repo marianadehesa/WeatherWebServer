@@ -39,6 +39,7 @@ Aplicación web desarrollada con **Node.js** y **Express** que permite consultar
 ```text
 ClimaWebServer/
 ├── db/
+├── images/
 ├── js/
 ├── modelos/
 ├── public/
